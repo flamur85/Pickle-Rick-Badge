@@ -1,0 +1,16 @@
+# pump up the volume
+ ffmpeg -i pickle_rick.mp3 -filter:a "volume=10.0" pickle_rick_loud.mp3
+
+# download crap to pi
+wget https://www.myinstants.com/media/sounds/rick-and-morty-dont-touch-it.mp3 -O dont_touch.mp3
+
+# copy crap to pi
+scp C:/Users/YourName/Music/pickle_rick.mp3 pi@ipaddress:/home/pi/audio_files/
+
+# shutdown pi now
+sudo shutdown -h now
+
+
+# kill python all processes
+sudo pkill -f "python3 .*\.py"
+
